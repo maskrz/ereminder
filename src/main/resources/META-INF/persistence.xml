@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="fbPU" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<class>com.herokuapp.ereminder.database.Event</class>
+		<class>com.herokuapp.ereminder.database.Reminder</class>
+		
+		<properties>
+			<!-- for JTA <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.WebSphereExtendedJtaPlatform"/> 
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.WebSphereExtendedJTATransactionLookup"/> 
+				<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/> 
+				<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.CMTTransactionFactory"/> 
+				<property name="jta.UserTransaction" value="java:comp/UserTransaction" /> -->
+<!-- 			<property name="driverClassName" value="org.postgresql.Driver" /> -->
+<!-- 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" /> -->
+<!-- 			<property name="hibernate.connection.url" -->
+<!-- 				value="jdbc:postgresql://localhost:5432/friendly-betting" /> -->
+<!-- 			<property name="hibernate.connection.username" value="postgres" /> -->
+<!-- 			<property name="hibernate.connection.password" value="root" /> -->
+<!-- 			<property name="show_sql" value="true" /> -->
+<!-- 			<property name="driverClassName" value="org.postgresql.Driver" /> -->
+<!-- 			<property name="url" value="jdbc:postgresql://localhost:5432/friendly-betting" /> -->
+<!-- 			<property name="username" value="postgres" /> -->
+<!-- 			<property name="password" value="root" /> -->
+<!-- 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" /> -->
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="validate" /> -->
+			<!-- FOR DEVELOPMENT ONLY -->
+<!-- 			<property name="hibernate.show_sql" value="true"/>  -->
+			<!-- <property name="hibernate.format_sql" 
+				value="true"/> <property name="hibernate.use_sql_comments" value="true"/> -->
+		</properties>
+	</persistence-unit>
+</persistence>
