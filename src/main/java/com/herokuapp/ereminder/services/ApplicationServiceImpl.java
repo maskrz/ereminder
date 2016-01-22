@@ -150,6 +150,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 	}
 	
 	private void sendReminders(List<Reminder> remindersToSend) {
+		System.out.println("Start sending reminders");
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setFrom("ereminder@gmail.com");
 		message.setTo("maskrz@gmail.com");

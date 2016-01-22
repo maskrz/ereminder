@@ -10,7 +10,7 @@ public class BatchServiceImpl implements BatchService {
 	@Autowired
 	private ApplicationService applicationService;
 	
-	@Scheduled(cron = "0 0 7 * * *")
+	@Scheduled(cron = "0 0 18 * * *")
 	@Override
 	public void sendReminders() {
 		getApplicationService().checkReminders();

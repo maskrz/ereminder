@@ -83,7 +83,8 @@ app
 					$scope.saveChanges = function() {
 						var str = createSendString();
 						MainService.save(str, function(result) {
-							console.log(result);
+							$scope.helloWorld;
+							alert("done");
 						});
 					}
 
@@ -118,13 +119,15 @@ app
 								+ document.getElementById("newName").value
 								+ ";";
 						MainService.add(str, function(result) {
-							console.log(result);
+							$scope.helloWorld;
+							alert("done");
 						});
 					}
 
 					$scope.sendReminders = function() {
 						MainService.send(function(result) {
-							console.log(result);
+							$scope.helloWorld;
+							alert("done");
 						});
 					}
 				}
